@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  /* height: 140vh; */
+  background: rgb(233, 233, 233);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container:active .profile-card {
+  filter: blur(2px);
+  transform: scale(.9);
+  /* transform: scale : 요소의 크기를 0.9배시킴 */
+  opacity: .5;
+}
+.container .profile-card:active {
+  filter: blur(0px);
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.profile-card {
+  position: relative;
+  background: white;
+  width: 60rem;
+  height: 25rem;
+  margin: 2rem;
+  border-radius: 5px;
+  display: flex;
+  cursor: pointer;
+  transition: .5s;
+}
+.profile-card:active {
+  /* left: -100px; */
+  position: relative;
+  transition: .5s;
+}
+.profile-card:visited {
+  transition: .5s;
+}
+
+.img-sec img {
+  height: 25rem;
+  width: 210px;
+  object-fit: cover;
+}
+
+.info {
+  position: relative;
+  z-index: 2;
+  padding: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.info h3 {
+  font-size: 3rem;
+}
+
+.info p {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.info span {
+  display: block;
+  position: absolute;
+  background: white;
+  height: 3rem;
+  width: 3rem;
+  transform: rotate(45deg);
+  left: 1.5rem;
+  top: 1rem;
+  z-index: -1;
+  transition: .5s;
+}
+.profile-card:hover {
+  box-shadow: 0 5px 2rem -1rem gray;
+}
+.profile-card:hover span {
+  left: -1.5rem;
+}
